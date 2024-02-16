@@ -9,6 +9,7 @@ As of 2023 R2, Acumatica discontinued maintenance of the WorkWave Route Manager 
 - - - -
 
 Use this repository if you intend to modify the integration. 
-Source Code link to branch
+
+* Acumatica 2023 R2 (23.203.0040 or higher) [2023 R2 Source Code](https://github.com/Acumatica/Acumatica-WorkWaveRouteManager/tree/2023R2)
 
 Visit [Acumatica Community | WorkWave Route Manager Integration](https://community.acumatica.com/add-ons-and-integrations-66/workwave-route-manager-integration-7350?tid=7350&fid=66) for more information.
