@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Features Type="AcumaticaWorkWave.FeatureSwitch.WWFeaturesSetExt" Key="0">
+	<Feature Name="RouteOptimizer">
+		<Access ScreenID="CS207700" ActionName="uploadTerritories"/>
+		<Access ScreenID="SO302000" ActionName="createWokWaveOrder"/>
+		<Access ScreenID="SO302000" ActionName="getDeliveryStatus"/>
+		<Access FieldClass="WORKWAVE" />
+	</Feature>
+</Features>

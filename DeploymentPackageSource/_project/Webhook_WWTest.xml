@@ -1,0 +1,13 @@
+<Webhook>
+	<data-set>
+		<relations format-version="3" relations-version="20160101" main-table="WebHook" />
+		<layout>
+			<table name="WebHook" />
+		</layout>
+		<data>
+			<WebHook>
+				<row WebHookID="cf920cca-53f4-40ff-adce-0fca4c3c27d4" Name="WWTest" Handler="AcumaticaWorkWave.WebHook.WWCallbackHandler" IsActive="1" IsSystem="0" RequestLogLevel="2" RequestRetainCount="10" NoteID="666a4601-895c-eb11-9223-b42e99f987a0" />
+			</WebHook>
+		</data>
+	</data-set>
+</Webhook>

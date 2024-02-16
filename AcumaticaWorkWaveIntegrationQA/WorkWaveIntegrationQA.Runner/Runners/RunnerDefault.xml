@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+	<general>
+		<browserbin>C:\ekrykun\WorkWave\git\AcumaticaWorkWaveIntegrationQA\ThirdParty\Lib\TestSDK\Chrome\chrome.exe</browserbin>
+		<browser_downloads_folder>C:\ekrykun\WorkWave\git\AcumaticaWorkWaveIntegrationQA\TestResult\Download</browser_downloads_folder>
+		<browserheadless>true</browserheadless>
+		<site_dst>
+			<url>http://localhost/23.203.0040</url>
+			<login>admin</login>
+			<pswd>password01</pswd>
+			<physicalpath>C:\AcumaticaSites\23.203.0040\23.203.0040.webapp\Site</physicalpath>
+		</site_dst>
+		<long_timeout_ms>120000</long_timeout_ms>
+		<logging>
+			<logStorage type="txt" level="DEBUG"
+						outputFolder="C:\ekrykun\WorkWave\git\AcumaticaWorkWaveIntegrationQA\TestResult\"
+						screenshotActive="false"
+						screenshotOutputFolder="C:\ekrykun\WorkWave\git\AcumaticaWorkWaveIntegrationQA\TestResult\Screenshot" />
+		</logging>
+	</general>
+	<testing>
+		<!--
+	  <Check Name="CheckingWorkWavePlugIn"/>
+	  <Check Name="SettingWorkWaveShipViaCode"/>
+	  	  -->
+	  <Check Name="CreateWorkWaveOrder"/>
+	  <Check Name="UpdateShipmentWhenOrderIsDeletedInWorkWave"/>
+	  <Check Name="CheckingBarcodeLimitationParameter"/>
+	  <Check Name="CancelingWorkWaveOrderInAcumatica"/>
+	  <Check Name="DeletingWorkWaveOrderInAcumatica"/>
+	  <Check Name="DisabledStoringOfAttachmentsForCarrier"/>
+	  <Check Name="AbsenceOfShipmentPackages"/>
+	  <Check Name="DeliveredWithIssueOrder"/>
+	  <Check Name="DifferentWorkWaveTerritories"/>
+	  <Check Name="DeletingWorkWaveShipmentInAcumatica"/>
+	  <Check Name="ProcessShipmentCreateWorkWaveOrderAction"/>
+	  <Check Name="ProcessShipmentGetDeliveryStatusAction"/>
+	  <Check Name="DisableCreateWorkWaveOrderWithoutDocumentDetails"/>
+	  <Check Name="WorkWaveTerritoryDuplicates"/>
+	  <Check Name="CheckingWorkWavePODReport"/>
+	  <Check Name="CheckingPickPackShip"/>
+	  <Check Name="QuickProcessOnSalesOrders"/>
+	  <Check Name="ValidateWorkWaveLabelsReport"/>
+	  <Check Name="ProcessShipmentWorkWaveShipmentWithoutDocumentItems"/>
+	  <Check Name="PrintLabelsQuickProcess"/>
+	  <Check Name="CreateWorkWaveOrderWithoutAttachments"/>
+	  <Check Name="WorkWaveShipmentSummaryScreen"/>
+
+	  <Check Name="TimeWindowsToAcumaticaTests"/>
+	  <Check Name="RetrieveTheTrackingURLFromWorkwaveIntoAcumaticaTests"/>
+	  <Check Name="ApplyFreightRatesToTheAcumaticaShipmentsWithTheWorkWaveShipViasTests"/>
+	  <Check Name="UsingCustomFeatureSwitchTests"/>
+	  <Check Name="StoreUseTrackingDataTests"/>
+	</testing>
+</config>

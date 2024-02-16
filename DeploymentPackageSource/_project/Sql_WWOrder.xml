@@ -1,0 +1,35 @@
+<Sql TableName="WWOrder" TableSchemaXml="#CDATA">
+	<CDATA name="TableSchemaXml"><![CDATA[<table name="WWOrder">
+  <col name="CompanyID" type="Int" default="Zero" />
+  <col name="WWLineNbr" type="Int" />
+  <col name="WWEntityID" type="UniqueIdentifier" />
+  <col name="WWRequestID" type="UniqueIdentifier" />
+  <col name="WWOrderID" type="UniqueIdentifier" nullable="true" />
+  <col name="WWOrderName" type="NVarChar(255)" />
+  <col name="WWOperation" type="NVarChar(7)" nullable="true" />
+  <col name="WWDeliveryStatus" type="Char(1)" nullable="true" />
+  <col name="WWDeliveryDateTime" type="DateTime" nullable="true" />
+  <col name="WWGPS" type="NVarChar(100)" nullable="true" />
+  <col name="WWErrorCode" type="Int" nullable="true" />
+  <col name="WWErrorMessage" type="NVarChar(MAX)" nullable="true" />
+  <col name="WWTrackingURL" type="NVarChar(200)" nullable="true" />
+  <col name="CreatedDateTime" type="DateTime" />
+  <col name="CreatedByID" type="UniqueIdentifier" />
+  <col name="CreatedByScreenID" type="Char(8)" />
+  <col name="LastModifiedDateTime" type="DateTime" />
+  <col name="LastModifiedByID" type="UniqueIdentifier" />
+  <col name="LastModifiedByScreenID" type="Char(8)" />
+  <col name="tstamp" type="Timestamp" />
+  <col name="NoteID" type="UniqueIdentifier" />
+  <col name="UsrOrderName" type="NVarChar(255)" nullable="true" />
+  <index name="WWOrder_NoteID" unique="true">
+    <col name="NoteID" />
+    <col name="CompanyID" />
+  </index>
+  <index name="WWOrder_PK" clustered="true" primary="true" unique="true">
+    <col name="CompanyID" />
+    <col name="WWLineNbr" />
+    <col name="WWEntityID" />
+  </index>
+</table>]]></CDATA>
+</Sql>

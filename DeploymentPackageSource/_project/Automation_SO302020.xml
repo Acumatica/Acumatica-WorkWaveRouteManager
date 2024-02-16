@@ -1,0 +1,27 @@
+<Automation screen="SO302020">
+	<Conditions screen="SO302020">
+		<AutomationScreenCondition ConditionID="6219b913-1adc-4cd3-ba82-fa4ee76578a7" ScreenID="SO302020" ConditionName="IsWorkWave" Order="1" AppendSystemCondition="False" JoinMethod="AND" InvertCondition="False">
+			<FilterRow LineNbr="1" CloseBrackets="0" OpenBrackets="0" FieldName="UsrShipViaCarrierIsWorkWave" Condition="1" Operator="0" Value2="False" Value="True" IsActive="True" IsFromScheme="True" />
+		</AutomationScreenCondition>
+		<AutomationScreenCondition ConditionID="cab9a385-4cba-4bae-b31a-96a207170b0a" ScreenID="SO302020" ConditionName="IsNotWorkWave" Order="2" AppendSystemCondition="False" JoinMethod="AND" InvertCondition="False">
+			<FilterRow LineNbr="1" CloseBrackets="0" OpenBrackets="0" FieldName="UsrShipViaCarrierIsWorkWave" Condition="1" Operator="0" Value2="False" Value="False" IsActive="True" IsFromScheme="True" />
+		</AutomationScreenCondition>
+		<AutomationScreenCondition ConditionID="05a8d883-23e5-4e2e-88ae-68bbd004fb62" ScreenID="SO302020" ConditionName="IsShipmentNotOpen" Order="3" AppendSystemCondition="False" JoinMethod="AND" InvertCondition="False">
+			<FilterRow LineNbr="1" CloseBrackets="0" OpenBrackets="0" FieldName="UsrShipmentIsOpenState" Condition="1" Operator="0" Value2="False" Value="False" IsActive="True" IsFromScheme="True" />
+		</AutomationScreenCondition>
+	</Conditions>
+	<Actions ScreenID="SO302020">
+		<Action IsActive="True" ActionName="CreateWorkWaveOrder" ActionType="G" PlacementInCategory="0" DisplayName="Create WorkWave Order" DisableCondition="05a8d883-23e5-4e2e-88ae-68bbd004fb62" WindowMode="S" HideCondition="cab9a385-4cba-4bae-b31a-96a207170b0a" Connotation="None">
+			<StateActionFields />
+			<StateActionParams />
+		</Action>
+		<Action IsActive="True" ActionName="scanConfirmShipment" ActionType="G" PlacementInCategory="0" DisplayName="Confirm Shipment" DisableCondition="6219b913-1adc-4cd3-ba82-fa4ee76578a7" WindowMode="S" Connotation="None">
+			<StateActionFields />
+			<StateActionParams />
+		</Action>
+		<Category IsActive="True" DisplayName="Actions" CategoryName="Action" Placement="0" LineNbr="0" />
+		<Category IsActive="True" DisplayName="Inquiries" CategoryName="Inquiry" Placement="0" LineNbr="1" />
+		<Category IsActive="True" DisplayName="Reports" CategoryName="Report" Placement="0" LineNbr="2" />
+		<Category IsActive="True" DisplayName="Approval" CategoryName="Approval" Placement="0" After="Report" LineNbr="3" />
+	</Actions>
+</Automation>

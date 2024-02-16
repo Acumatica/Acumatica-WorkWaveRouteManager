@@ -1,0 +1,4 @@
+<Table TableName="SOOrder">
+	<Column TableName="SOOrder" ColumnName="UsrWWStartSec" ColumnType="date" AllowNull="True" DecimalPrecision="0" DecimalLength="0" IsNewColumn="True" IsUnicode="True" />
+	<Column TableName="SOOrder" ColumnName="UsrWWEndSec" ColumnType="date" AllowNull="True" DecimalPrecision="0" DecimalLength="0" IsNewColumn="True" IsUnicode="True" />
+</Table>

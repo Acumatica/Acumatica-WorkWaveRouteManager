@@ -1,0 +1,4 @@
+<Table TableName="Customer">
+	<Column TableName="Customer" ColumnName="usrWWEndSec" ColumnType="date" AllowNull="True" DecimalPrecision="0" DecimalLength="0" IsNewColumn="True" IsUnicode="True" />
+	<Column TableName="Customer" ColumnName="usrWWStartSec" ColumnType="date" AllowNull="True" DecimalPrecision="0" DecimalLength="0" IsNewColumn="True" IsUnicode="True" />
+</Table>

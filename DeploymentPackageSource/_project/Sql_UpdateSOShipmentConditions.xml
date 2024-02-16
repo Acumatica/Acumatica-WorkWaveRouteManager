@@ -1,0 +1,20 @@
+<Sql TableName="UpdateSOShipmentConditions" CustomScript="#CDATA">
+	<CDATA name="CustomScript"><![CDATA[IF COL_LENGTH('SOShipment','UsrIsWorkWave') IS NOT NULL
+AND COL_LENGTH('SOShipment','UsrIsOrderTied') IS NOT NULL
+    BEGIN
+        EXEC('
+            UPDATE SOShipment
+            SET
+                [UsrIsWorkWave] = 1,
+                [UsrIsOrderTied] = (SELECT COUNT(1) FROM SOShipLine WHERE SOShipLine.ShipmentNbr = sp.ShipmentNbr)
+            FROM SOShipment sp
+            INNER JOIN Carrier ca
+                ON ca.CarrierID = sp.ShipVia
+                AND ca.CompanyID = sp.CompanyID
+            INNER JOIN CarrierPlugin cap
+                ON ca.CarrierPluginID = cap.CarrierPluginID
+                AND ca.CompanyID = cap.CompanyID
+            WHERE cap.PluginTypeName = ''AcumaticaWorkWave.Plugin.WorkWaveCarrier''
+        ')
+    END]]></CDATA>
+</Sql>
